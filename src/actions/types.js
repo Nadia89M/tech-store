@@ -1,0 +1,8 @@
+export const HANDLE_SIDEBAR = 'HANDLE_SIDEBAR';
+export const HANDLE_CART = 'HANDLE_CART';
+export const CLOSE_CART = 'CLOSE_CART';
+export const OPEN_CART = 'OPEN_CART';
+export const SET_PRODUCTS = 'SET_PRODUCTS';
+export const SET_FEATURED_PRODUCTS = 'SET_FEATURED_PRODUCTS';
+export const SET_SINGLE_PRODUCT = 'SET_SINGLE_PRODUCT';
+export const ADD_TO_CART = 'ADD_TO_CART';

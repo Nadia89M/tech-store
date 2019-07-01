@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { Provider } from 'react-redux';
+import store from './store';
+
 import Home from './pages/HomePage';
 import About from './pages/AboutPage';
 import Cart from './pages/CartPage';
@@ -20,21 +23,23 @@ class App extends Component {
   render() {
     return (
       <>
-        <Router>
-          <Navbar />
-          <SideBar />
-          <SideCart />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/cart" component={Cart} />
-            <Route path="/contact" component={Contact} />
-            <Route exact path="/products" component={Products} />
-            <Route path="/products/:id" component={SingleProduct} />
-            <Route component={NotFound} />
+        <Provider store={store}>
+          <Router>
+            <Navbar />
+            <SideBar />
+            <SideCart />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/cart" component={Cart} />
+              <Route path="/contact" component={Contact} />
+              <Route exact path="/products" component={Products} />
+              <Route path="/products/:id" component={SingleProduct} />
+              <Route component={NotFound} />
+            </Switch>
             <Footer />
-          </Switch>
-        </Router>
+          </Router>
+        </Provider>
       </>
     )
   }
