@@ -27,7 +27,7 @@ const SideCart = ({ product: { cartOpen, cart, cartSubTotal, cartSideCart }, clo
                         <li key={item.id} className="cart-item mb-4">
                             <img
                                 width="35"
-                                src={`../${item.image}`}
+                                src={`/${item.image}`}
                                 // src={item.image}
                                 alt="cart item"
                             />

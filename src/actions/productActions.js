@@ -1,4 +1,4 @@
-import { items } from "../reducers/productData";
+import { client } from "../reducers/contentful";
 
 import {
     HANDLE_SIDEBAR,
@@ -19,11 +19,14 @@ export const setProducts = () => async dispatch => {
     try {
         // const res = await fetch('');
         // const data = await res.json();
-
-        dispatch({
-            type: SET_PRODUCTS,
-            payload: items
-        });
+        client
+            .getEntries({
+                content_type: 'techStoreProducts'
+            })
+            .then(response => dispatch({
+                type: SET_PRODUCTS,
+                payload: response.items
+            }));
     } catch (err) {
         console.log(err);
     }
