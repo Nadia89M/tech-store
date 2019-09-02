@@ -11,7 +11,7 @@ import About from './pages/AboutPage';
 import Cart from './pages/CartPage';
 import Contact from './pages/ContactPage';
 import Products from './pages/ProductsPage';
-import SingleProduct from './pages/SingleProductPage';
+import SingleProductPage from './pages/SingleProductPage';
 import NotFound from './pages/NotFoundPage';
 
 import Navbar from './components/Navbar';
@@ -34,7 +34,7 @@ class App extends Component {
               <Route path="/cart" component={Cart} />
               <Route path="/contact" component={Contact} />
               <Route exact path="/products" component={Products} />
-              <Route path="/products/:id" component={SingleProduct} />
+              <Route path="/products/:id" component={SingleProductPage} />
               <Route component={NotFound} />
             </Switch>
             <Footer />

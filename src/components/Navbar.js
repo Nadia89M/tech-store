@@ -24,6 +24,7 @@ const Navbar = ({ product: { cartItems }, handleSidebar, handleCart }) => {
 const NavWrapper = styled.nav`
   position: -webkit-sticky;
   position: sticky;
+  z-index: 999;
   top: 0;
   width: 100%;
   padding: 1rem 1.5rem;
